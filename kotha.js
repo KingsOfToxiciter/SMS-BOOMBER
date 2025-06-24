@@ -1,3 +1,5 @@
+const axios = require("axios");
+
 async function kotha(number, limit) {
   for (let round = 0; round < limit; round++) {
     console.log(`▶ Round ${round + 1}/${limit} started`);
@@ -49,4 +51,4 @@ async function kotha(number, limit) {
   console.log("✅ All rounds completed.");
 }
 
-module.exports = { boomber };
+module.exports = { kotha };
