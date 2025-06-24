@@ -7,6 +7,9 @@ const port = 3000;
 app.get("/msgboomber", async (req, res) => {
   const number = req.query.number;
   const limit = req.query.limit || 500;
+    if (!number) {
+      return res.json({ status: "error", response: "number must be required", author: "HA SA N"});
+    }
    try {
     boomber(number, limit); 
      res.json({ status: "success", response: "Message Boomber successfully started", author: "HA SA N" });
