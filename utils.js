@@ -5,6 +5,7 @@ const { trucklagbe } = require("./trucklagbe");
 const { kotha } = require("./kotha");
 const { sundarban } = require("./sundarban");
 const { ghoori } = require("./ghoori");
+const { deepto } = require("./deepto");
 
 async function boomber(number, limit) {
   try {
@@ -15,6 +16,7 @@ async function boomber(number, limit) {
     kotha(number, limit);
     sundarban(number, limit);
     ghoori(number, limit);
+    deepto(number, limit);
   } catch (e) {
     console.error(e.message)
   }
