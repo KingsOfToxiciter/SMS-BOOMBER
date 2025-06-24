@@ -1,3 +1,5 @@
+const axios = require("axios");
+
 async function sheba(number, limit) {
   for (let round = 0; round < limit; round++) {
     console.log(`▶ Round ${round + 1}/${limit} started`);
