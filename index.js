@@ -4,7 +4,7 @@ const { boomber } = require("./utils")
 const app = express();
 const port = 3000;
 
-app.get("/msgboomber", async (req, res) => {
+app.get("/sms-boomber", async (req, res) => {
   const number = req.query.number;
   const limit = req.query.limit || 500;
     if (!number) {
