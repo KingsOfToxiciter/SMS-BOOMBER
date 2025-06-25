@@ -43,17 +43,17 @@ const response = await axios.post(
   }
 );
         
-        console.log(`[${i + 1}/10] Sent to ${number} | Response:`, response.data);
+        console.log(`[${i + 1}/10] Cineplex Sent to ${number} | Response:`, response.data);
       } catch (error) {
-        console.error(`[${i + 1}/10] Failed:`, error.message);
+        console.error(`[${i + 1}/10] Cineplex Failed:`, error.message);
       }
 
       await new Promise(resolve => setTimeout(resolve, 3000));
     }
 
     if (round < limit - 1) {
-      console.log(`⏳ Waiting 3 minutes before next round...`);
-      await new Promise(resolve => setTimeout(resolve, 180000));
+      console.log(`⏳ Waiting 1 hours before next round...`);
+      await new Promise(resolve => setTimeout(resolve, 3600000));
     }
   }
 
