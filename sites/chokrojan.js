@@ -4,7 +4,7 @@ async function chokrojan(number, limit) {
   for (let round = 0; round < limit; round++) {
     console.log(`▶ Round ${round + 1}/${limit} started`);
 
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 30; i++) {
       try {
         const response = await axios.post(
   'https://chokrojan.com/api/v1/passenger/login/mobile',
@@ -36,17 +36,17 @@ async function chokrojan(number, limit) {
   }
 );
         
-        console.log(`[${i + 1}/10] Sent to ${number} | Response:`, response.data);
+        console.log(`[${i + 1}/10] Chokrojan Sent to ${number} | Response:`, response.data);
       } catch (error) {
-        console.error(`[${i + 1}/10] Failed:`, error.message);
+        console.error(`[${i + 1}/10] Chokrojan Failed:`, error.message);
       }
 
       await new Promise(resolve => setTimeout(resolve, 3000));
     }
 
     if (round < limit - 1) {
-      console.log(`⏳ Waiting 5 minutes before next round...`);
-      await new Promise(resolve => setTimeout(resolve, 180000));
+      console.log(`⏳ Waiting 1 hours before next round...`);
+      await new Promise(resolve => setTimeout(resolve, 3600000));
     }
   }
 
