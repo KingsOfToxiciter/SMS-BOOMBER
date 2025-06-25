@@ -4,7 +4,7 @@ async function bata(number, limit) {
   for (let round = 0; round < limit; round++) {
     console.log(`▶ Round ${round + 1}/${limit} started`);
 
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 30; i++) {
       try {
         const num = number.slice(1);
         const response = await axios.post(
@@ -38,17 +38,17 @@ async function bata(number, limit) {
   }
 );
         
-        console.log(`[${i + 1}/10] Sent to ${number} | Response:`, response.data);
+        console.log(`[${i + 1}/10] Bata Sent to ${number} | Response:`, response.data);
       } catch (error) {
-        console.error(`[${i + 1}/10] Failed:`, error.message);
+        console.error(`[${i + 1}/10] Bata Failed:`, error.message);
       }
 
       await new Promise(resolve => setTimeout(resolve, 3000));
     }
 
     if (round < limit - 1) {
-      console.log(`⏳ Waiting 3 minutes before next round...`);
-      await new Promise(resolve => setTimeout(resolve, 300000));
+      console.log(`⏳ Waiting 1 hours before next round...`);
+      await new Promise(resolve => setTimeout(resolve, 3600000));
     }
   }
 
