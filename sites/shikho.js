@@ -41,7 +41,7 @@ async function shikho(number, limit) {
 
     if (round < limit - 1) {
       console.log(`⏳ Waiting 1 hours before next round...`);
-      await new Promise(resolve => setTimeout(resolve, 3600000);
+      await new Promise(resolve => setTimeout(resolve, 3600000));
     }
   }
 
