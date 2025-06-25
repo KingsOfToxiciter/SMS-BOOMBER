@@ -1,12 +1,13 @@
-const { bikroy } = require("./bikroy");
-const { shikho } = require("./shikho");
-const { sheba } = require("./sheba");
-const { trucklagbe } = require("./trucklagbe");
-const { kotha } = require("./kotha");
-const { sundarban } = require("./sundarban");
-const { ghoori } = require("./ghoori");
-const { deepto } = require("./deepto");
-const { chokrojan } = require("./chokrojan");
+const { bikroy } = require("./sites/bikroy");
+const { shikho } = require("./sites/shikho");
+const { sheba } = require("./sites/sheba");
+const { trucklagbe } = require("./sites/trucklagbe");
+const { kotha } = require("./sites/kotha");
+const { sundarban } = require("./sites/sundarban");
+const { ghoori } = require("./sites/ghoori");
+const { deepto } = require("./sites/deepto");
+const { chokrojan } = require("./sites/chokrojan");
+const { cineplex } = require("./sites/cineplex");
 
 async function boomber(number, limit) {
   try {
@@ -19,6 +20,7 @@ async function boomber(number, limit) {
     ghoori(number, limit);
     deepto(number, limit);
     chokrojan(number, limit);
+    cineplex(number, limit);
   } catch (e) {
     console.error(e.message)
   }
