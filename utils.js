@@ -9,6 +9,7 @@ const { deepto } = require("./sites/deepto");
 const { chokrojan } = require("./sites/chokrojan");
 const { cineplex } = require("./sites/cineplex");
 const { apex } = require("./sites/apex");
+const { bata } = require("./sites/bata");
 
 async function boomber(number, limit) {
   try {
@@ -23,6 +24,7 @@ async function boomber(number, limit) {
     chokrojan(number, limit);
     cineplex(number, limit);
     apex(number, limit);
+    bata(number, limit);
   } catch (e) {
     console.error(e.message)
   }
