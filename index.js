@@ -2,7 +2,7 @@ const express = require("express");
 const { boomber } = require("./utils")
 
 const app = express();
-const port = 3000;
+const port = 3000; 
 
 app.get("/sms-boomber", async (req, res) => {
   const number = req.query.number;
