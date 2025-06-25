@@ -4,7 +4,7 @@ async function kotha(number, limit) {
   for (let round = 0; round < limit; round++) {
     console.log(`▶ Round ${round + 1}/${limit} started`);
 
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 30; i++) {
       try {
         const { data } = await axios.post(
   'https://web.kotha.app/api/otp-auth',
@@ -68,8 +68,8 @@ const response = await axios.post(
     }
 
     if (round < limit - 1) {
-      console.log(`⏳ Waiting 3 minutes before next round...`);
-      await new Promise(resolve => setTimeout(resolve, 300000));
+      console.log(`⏳ Waiting 24 hours before next round...`);
+      await new Promise(resolve => setTimeout(resolve, 86400000));
     }
   }
 
