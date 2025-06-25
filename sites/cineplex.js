@@ -5,7 +5,7 @@ async function cineplex(number, limit) {
   for (let round = 0; round < limit; round++) {
     console.log(`▶ Round ${round + 1}/${limit} started`);
 
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 30; i++) {
       try {
         const form = new FormData();
 form.append('name', "It'z HA S AN");
