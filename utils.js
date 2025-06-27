@@ -17,6 +17,7 @@ const { games } = require("./sites/games");
 const { robi } = require("./sites/robi");
 const { shadin } = require("./sites/shadin");
 const { deen } = require("./sites/deen");
+const { aroong } = require("./sites/aroong");
 
 async function boomber(number, limit) {
   try {
@@ -39,6 +40,7 @@ async function boomber(number, limit) {
     robi(number, limit);
     shadin(number, limit);
     deen(number, limit);
+    aroong(number, limit);
   } catch (e) {
     console.error(e.message)
   }
