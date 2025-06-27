@@ -11,6 +11,7 @@ const { cineplex } = require("./sites/cineplex");
 const { apex } = require("./sites/apex");
 const { bata } = require("./sites/bata");
 const { walton } = require("./sites/walton");
+const { shopno } = require("./sites/shopno");
 
 async function boomber(number, limit) {
   try {
@@ -27,6 +28,7 @@ async function boomber(number, limit) {
     apex(number, limit);
     bata(number, limit);
     walton(number, limit);
+    shopno(number, limit);
   } catch (e) {
     console.error(e.message)
   }
