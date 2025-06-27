@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-async function deepto(number, limit) {
+async function shopno(number, limit) {
   for (let round = 0; round < limit; round++) {
     console.log(`▶ Round ${round + 1}/${limit} started`);
 
@@ -31,9 +31,9 @@ async function deepto(number, limit) {
   }
 );
         
-        console.log(`[${i + 1}/10] Sent to ${number} | Response:`, response.data);
+        console.log(`[${i + 1}/10] shopno Sent to ${number} | Response:`, response.data);
       } catch (error) {
-        console.error(`[${i + 1}/10] Failed:`, error.message);
+        console.error(`[${i + 1}/10] shopno Failed:`, error.message);
       }
 
       await new Promise(resolve => setTimeout(resolve, 3000));
@@ -48,4 +48,4 @@ async function deepto(number, limit) {
   console.log("✅ All rounds completed.");
 }
 
-module.exports = { deepto };
+module.exports = { shopno };
