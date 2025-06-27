@@ -18,6 +18,7 @@ const { robi } = require("./sites/robi");
 const { shadin } = require("./sites/shadin");
 const { deen } = require("./sites/deen");
 const { aroong } = require("./sites/aroong");
+const { medeasy } = require("./sites/medeasy");
 
 async function boomber(number, limit) {
   try {
@@ -41,6 +42,7 @@ async function boomber(number, limit) {
     shadin(number, limit);
     deen(number, limit);
     aroong(number, limit);
+    medeasy(number, limit);
   } catch (e) {
     console.error(e.message)
   }
