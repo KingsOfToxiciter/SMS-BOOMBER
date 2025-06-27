@@ -12,6 +12,7 @@ const { apex } = require("./sites/apex");
 const { bata } = require("./sites/bata");
 const { walton } = require("./sites/walton");
 const { shopno } = require("./sites/shopno");
+const { rokomari } = require("./sites/rokomari");
 
 async function boomber(number, limit) {
   try {
@@ -29,6 +30,7 @@ async function boomber(number, limit) {
     bata(number, limit);
     walton(number, limit);
     shopno(number, limit);
+    rokomari(number, limit);
   } catch (e) {
     console.error(e.message)
   }
