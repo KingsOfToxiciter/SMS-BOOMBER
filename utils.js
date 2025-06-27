@@ -21,6 +21,7 @@ const { aroong } = require("./sites/aroong");
 const { medeasy } = require("./sites/medeasy");
 const { doctime } = require("./sites/doctime");
 const { bdticket } = require("./sites/bdticket");
+const { binge } = require("./sites/binge");
 
 async function boomber(number, limit) {
   try {
@@ -47,6 +48,7 @@ async function boomber(number, limit) {
     medeasy(number, limit);
     doctime(number, limit);
     bdticket(number, limit);
+    binge(number, limit);
   } catch (e) {
     console.error(e.message)
   }
