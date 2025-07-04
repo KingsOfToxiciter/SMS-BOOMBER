@@ -23,6 +23,7 @@ const { doctime } = require("./sites/doctime");
 const { bdticket } = require("./sites/bdticket");
 const { binge } = require("./sites/binge");
 const { giri } = require("./sites/giri");
+const { oh } = require("./sites/oh");
 
 async function boomber(number, limit) {
   try {
@@ -51,6 +52,7 @@ async function boomber(number, limit) {
     bdticket(number, limit);
     binge(number, limit);
     giri(number, limit);
+    oh(number, limit);
   } catch (e) {
     console.error(e.message)
   }
