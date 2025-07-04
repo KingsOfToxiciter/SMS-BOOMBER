@@ -17,6 +17,8 @@ app.get("/sms-boomber", async (req, res) => {
   }
   
   const isValid = /^[0-9]{11}$/.test(number);
+  const tMsg = limit * 30 + " message";
+  const tDays = limit / 24 + " days";
 
   if (!isValid) {
     return res.status(400).json({
@@ -28,10 +30,9 @@ app.get("/sms-boomber", async (req, res) => {
 
   try {
     boomber(number, limit);
-
     return res.status(200).json({
       status: "success",
-      response: "📨 SMS Bomber started successfully",
+      response: `🚨 | Bomber started successfully\nTarget Number: ${number}.\nLimit: ${limit}\nTotal Message: ${tMsg}\nNeed to Send: ${tDays}`,
       author: "HA SA N"
     });
   } catch (error) {
