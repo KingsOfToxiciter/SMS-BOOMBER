@@ -11,7 +11,7 @@ async function walton(number, limit) {
   {
     'auth': {
       'countryCode': '880',
-      'deviceUuid': '067f6540-6393-11f0-a849-01a3d19588d8',
+      'deviceUuid': '',
       'phone': number,
       'type': 'LOGIN'
     },
@@ -23,7 +23,7 @@ async function walton(number, limit) {
       'accept': '*/*',
       'accept-language': 'en-US,en;q=0.9',
       'content-type': 'application/json',
-      'cookie': '_gcl_gs=2.1.k1$i1750842793$u172102693; _gcl_au=1.1.1765371502.1750842798; _fbp=fb.2.1750842798656.75452712527328085; _gcl_aw=GCL.1750842800.CjwKCAjwvO7CBhAqEiwA9q2YJUtEa_C_DUIbD6Eai9dlcPvLXw6aHiIntlZ9Ofl5M3VdVHF2FiIiwRoCDmQQAvD_BwE; _ga=GA1.1.733999356.1750842800; device-uuid=067f6540-6393-11f0-a849-01a3d19588d8; _ga_91FHYEDXE9=GS2.1.s1750842799$o1$g1$t1750842819$j40$l0$h0',
+      'cookie': '_gcl_gs=2.1.k1$i1750842793$u172102693; _gcl_au=1.1.1765371502.1750842798; _fbp=fb.2.1750842798656.75452712527328085; _gcl_aw=GCL.1750842800.CjwKCAjwvO7CBhAqEiwA9q2YJUtEa_C_DUIbD6Eai9dlcPvLXw6aHiIntlZ9Ofl5M3VdVHF2FiIiwRoCDmQQAvD_BwE; _ga=GA1.1.733999356.1750842800; device-uuid=; _ga_91FHYEDXE9=GS2.1.s1750842799$o1$g1$t1750842819$j40$l0$h0',
       'origin': 'https://waltonplaza.com.bd',
       'referer': 'https://waltonplaza.com.bd/auth/phone-login',
       'sec-ch-ua': '"Chromium";v="137", "Not/A)Brand";v="24"',
